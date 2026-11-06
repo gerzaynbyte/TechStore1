@@ -1,0 +1,10 @@
+ID,Regla,Entrada,Resultado_esperado,Tipo,Test,Estado
+CP-01,RN-11 Cancelación,"usuario=cliente, propietario=cliente, estado=Pago confirmado, antigüedad=1h 59min",Permitido,Éxito,test_cancel_within_window,Pendiente
+CP-02,RN-11 Cancelación,"usuario=cliente, propietario=cliente, estado=Pago confirmado, antigüedad=2h 01min",Denegado,Error,test_cancel_after_deadline,Pendiente
+CP-03,RN-11 Cancelación,"usuario=cliente, propietario=cliente, estado=Pago confirmado, antigüedad=2h 00min exactas",Denegado,Límite,test_cancel_exactly_2h,Pendiente
+CP-04,RN-07 Límite unidades,"sku_A, cantidad=49",Permitido,Éxito,test_sku_limit_ok,Pendiente
+CP-05,RN-07 Límite unidades,"sku_A, cantidad=51",Denegado,Error,test_sku_limit_exceeded,Pendiente
+CP-06,RN-07 Límite unidades,"sku_A, cantidad=50 exactas",Permitido,Límite,test_sku_limit_exact,Pendiente
+CP-07,RN-08 Intentos pago,"intentos_actuales=2, resultado_pago=aprobado",Permitido,Éxito,test_payment_approved_before_max,Pendiente
+CP-08,RN-08 Intentos pago,"intentos_actuales=3, resultado_pago=rechazado",Denegado,Error,test_max_attempts_reached,Pendiente
+CP-09,RN-08 Intentos pago,"intentos_actuales=3, ventana_reinició=True",Permitido,Límite,test_attempts_reset_after_timeout,Pendiente
