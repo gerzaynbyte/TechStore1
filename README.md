@@ -63,12 +63,12 @@ Arranque–Acto–Afirmación (AAA) en todas las pruebas; fechas fijas pasadas e
 Mocks para servicios externos: ninguna prueba genera un cargo real; la pasarela es un Mock.
 SQLite en memoria para las pruebas de transacciones: no sustituye todas las pruebas de un motor productivo como PostgreSQL.
 Los bordes de las reglas temporales y numéricas de PetMarket (2 h exactas en RN-11, tercer rechazo en RN-08, unidad 51 en RN-07) se tratan como excluyentes/incluyentes según lo aprobado en el BRD, y cada supuesto está documentado en la sección 12 del informe.
-🔁 Integración continua (CI)
+- Integración continua (CI)
 El workflow .github/workflows/ci.yml ejecuta en cada push y pull request: checkout, instalación de Python y dependencias, Ruff, pytest con umbral de cobertura del 80% y compilación de src/ (compileall).
 
 Importante: El pipeline realiza verificación de build (compileall), no despliegue productivo.
 
-⚠️ Notas sobre el alcance
+- Notas sobre el alcance
 Importante: El proyecto es un ejemplo de pedidos, no la solución de los 17 PIA. La regla de cancelación impide cancelar pedidos enviados incluso para administrador; esto resuelve explícitamente una ambigüedad del slide original.
 
 La adaptación al PIA (PetMarket) cubre las tres reglas seleccionadas del BRD; el resto de las 21 RN del documento de requisitos no está implementado en este laboratorio.
