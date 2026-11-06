@@ -64,14 +64,15 @@ src/
 ├── domain.py            # Reglas del proyecto base: Order.confirm(), descuento VIP,
 │                        #   validación de total y estado CONFIRMED
 ├── petmarket_domain.py  # Adaptación PIA: Pedido (RN-07, RN-11) y
-│                        #   SesionPago (RN-08), con errores auditables (RN-xx en mensaje)
+├── security_pia.PY      #   SesionPago (RN-08), con errores auditables (RN-xx en mensaje)
 ├── application.py       # Servicio de cobro OrderService, con inyección de pasarela
 ├── repository.py        # Persistencia SQLAlchemy (tabla orders, commit/rollback)
 └── security.py          # Política de cancelación por rol y antigüedad (24 h)
 
 tests/
 ├── test_order.py        # Unitarias del dominio base
-├── test_petmarket_rn07_rn08_rn11.py  # 9 casos del PIA (CP-01 … CP-09)
+├── test_oia_rules.py    # 9 casos del PIA (CP-01 … CP-09)
+├── test_pia_integration.py # Pruebas de integración para el pia
 ├── test_repository.py   # Integración: commit y rollback en SQLite en memoria
 ├── test_service.py      # Simulación de pasarela con unittest.mock
 └── test_security.py     # Matriz de autorización con fechas fijas
