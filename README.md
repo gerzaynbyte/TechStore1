@@ -1,7 +1,8 @@
-Laboratorio Unidad 5 · Integración, Pruebas y Calidad
+# Laboratorio Unidad 5 · Integración, Pruebas y Calidad
+
 Proyecto de pruebas automatizadas para reglas de negocio de pedidos, con adaptación al PIA de la empresa PetMarket (comercio electrónico de productos para mascotas).
 
-📋 Descripción
+# Descripción
 El proyecto verifica con pruebas automatizadas que las reglas de negocio se cumplen, que la persistencia y los servicios externos se comportan como se espera, y que el pipeline de GitHub Actions rechaza cambios que rompan las pruebas.
 
 Consta de dos capas:
@@ -11,24 +12,24 @@ Adaptación al PIA (PetMarket): tres reglas de negocio propias del BRD de la emp
 RN-07 — Límite de 50 unidades por SKU por pedido.
 RN-08 — Máximo 3 intentos de pago en 15 minutos; al tercer rechazo el carrito se libera y el cliente debe reiniciar el checkout.
 RN-11 — Cancelación gratuita por el cliente solo dentro de 2 horas desde la confirmación del pago y en estatus "Pago confirmado" o "En preparación".
-⚙️ Requisitos
-Python 3.11 o superior
-Git (para el flujo CI)
-No se requiere Docker ni base de datos instalada: las pruebas de persistencia usan SQLite en memoria.
-🚀 Instalación
+- Requisitos
+  Python 3.11 o superior
+  Git (para el flujo CI)
+  No se requiere Docker ni base de datos instalada: las pruebas de persistencia usan SQLite en memoria.
+- Instalación
 Windows PowerShell
-py -3.11 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+  py -3.11 -m venv .venv
+  .\.venv\Scripts\Activate.ps1
+  pip install -r requirements.txt
 
 macOS / Linux
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+  python3 -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
 
 Si falla la activación en PowerShell, use el intérprete directo: .venv\Scripts\python.exe -m pytest -v.
 
-▶️ Comandos de ejecución
+- Comandos de ejecución
 # Suite completa de pruebas
 pytest -v --cov=src --cov-report=term-missing --cov-report=html --cov-fail-under=80
 
