@@ -35,9 +35,6 @@ pytest -v --cov=src --cov-report=term-missing --cov-report=html --cov-fail-under
 # Verificación de estilo de código (lint)
 ruff check src tests
 
-# Cobertura en HTML (abrir en navegador)
-htmlcov/index.html
-
 Resultado esperado: pytest termina en verde con cobertura ≥ 80% sobre src/ y Ruff sin errores. La cobertura del 80% significa que al menos el 80% de las líneas instrumentadas fueron ejecutadas, no que el 80% de los defectos fueron detectados.
 
 🏗️ Arquitectura
@@ -81,7 +78,4 @@ Evidencias E1–E9	docs/evidencias.md (capturas y reflexión de cada paso del la
 Importante: El proyecto es un ejemplo de pedidos, no la solución de los 17 PIA. La regla de cancelación impide cancelar pedidos enviados incluso para administrador; esto resuelve explícitamente una ambigüedad del slide original.
 
 La adaptación al PIA (PetMarket) cubre las tres reglas seleccionadas del BRD; el resto de las 21 RN del documento de requisitos no está implementado en este laboratorio.
-
-🔒 Seguridad de la entrega
-El repositorio excluye mediante .gitignore: .venv/, __pycache__/, .pytest_cache/, htmlcov/ y artefactos de caché. No se incluyen tokens, claves, credenciales ni datos personales.
 
