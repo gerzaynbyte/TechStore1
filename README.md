@@ -68,13 +68,6 @@ El workflow .github/workflows/ci.yml ejecuta en cada push y pull request: checko
 
 Importante: El pipeline realiza verificación de build (compileall), no despliegue productivo.
 
-📦 Contenido de la entrega
-Elemento	Ubicación
-Código src/ y tests/	Este repositorio
-Matriz de pruebas CSV	docs/matriz_pruebas.csv (CP-01 a CP-09)
-Reporte de cobertura HTML	htmlcov/index.html (generado con el comando de cobertura)
-Pipeline CI	Pestaña Actions del repositorio (ejecuciones verde, roja y recuperada)
-Evidencias E1–E9	docs/evidencias.md (capturas y reflexión de cada paso del laboratorio)
 ⚠️ Notas sobre el alcance
 Importante: El proyecto es un ejemplo de pedidos, no la solución de los 17 PIA. La regla de cancelación impide cancelar pedidos enviados incluso para administrador; esto resuelve explícitamente una ambigüedad del slide original.
 
